@@ -5,7 +5,7 @@ files:
     destination: /usr/share/nginx/html
 hooks:
   ApplicationStop:
-    #- location: deregister_from_elb.sh
-  ApplicationStart:
-    #- location: register_with_elb.sh
+    - location: deregister_from_elb.sh
+  AfterInstall:
+    - location: register_with_elb.sh
 
