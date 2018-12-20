@@ -3,9 +3,4 @@ os: linux
 files:
   - source: /
     destination: /usr/share/nginx/html
-hooks:
-  ApplicationStop:
-    - location: deregister_from_elb.sh
-  AfterInstall:
-    - location: register_with_elb.sh
 
